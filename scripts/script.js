@@ -22,7 +22,7 @@ let preferences = {
     weatherIcon: null,
     location: "London",
     darkBackground: false,
-    showQuotes: false,
+    showQuotes: true,
     language: "EN"
 };
 

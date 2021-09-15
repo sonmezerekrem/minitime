@@ -4,7 +4,7 @@ export const about = {
     "contact": "ekremsonmezerdeveloperacc@gmail.com",
     "sources": [
         ["images","Lorem Picsum", "https://picsum.photos.com"],
-        ["icons","Remix Icons", "https://remixico.com"],
+        ["icons","Remix Icons", "https://remixicon.com"],
         ["weather","OpenWeather", "https://openweathermap.org"],
     ],
     "version": "1.0",
