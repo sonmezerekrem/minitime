@@ -1,0 +1,163 @@
+/* ========== GENERAL STYLING ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: Prompt, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    min-height: 100px;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ========== FONT STYLING ========== */
+.font-300 {
+    font-weight: 300;
+}
+
+.font-500 {
+    font-weight: 500;
+}
+
+.font-700 {
+    font-weight: 700;
+}
+
+.montserrat {
+    font-family: Montserrat, sans-serif;
+}
+
+.poppins {
+    font-family: Poppins, sans-serif;
+}
+
+.prompt {
+    font-family: Prompt, sans-serif;
+}
+
+
+/* ========== DATE AND TIME STYLING ========== */
+#datetime-container {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+#date {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
+
+#time {
+    font-size: 128px;
+    text-align: center;
+    color: white;
+}
+
+
+/* ========== SWITCH STYLING ========== */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #212121;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 28px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.select-box {
+    border: none;
+    background: #ccc;
+    padding: 5px;
+    width: 100px;
+    border-radius: 3px;
+}
+
+#quotes-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-style: italic;
+    color: white;
+    font-size: 16px;
+    max-width: 840px;
+    position: absolute;
+    bottom: 10px;
+}
+
+#quotes-container #quote {
+    margin-bottom: 10px;
+}
+
+#quotes-container #author {
+}

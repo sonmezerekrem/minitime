@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Tab</title>
+    <link rel="icon" href="images/icons/home.svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;500;700&family=Prompt:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+
+</head>
+<body id="body">
+
+<div id="container">
+
+
+    <div id="datetime-container">
+        <span id="date" class="font-300"></span>
+        <span id="time" class="font-300"></span>
+    </div>
+
+    <div id="quotes-container" class="font-300">
+        <span id="quote"></span>
+        <span id="author" class="font-500"></span>
+    </div>
+
+
+    <div id="settings-container" class="settings-container">
+        <button id="settings-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M12 1l9.5 5.5v11L12 23l-9.5-5.5v-11L12 1zm0 2.311L4.5 7.653v8.694l7.5 4.342 7.5-4.342V7.653L12 3.311zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                      fill="rgba(255,255,255,1)"/>
+            </svg>
+        </button>
+        <div id="settings">
+
+            <span id="settings-heading">
+                Settings
+            </span>
+
+            <div class="settings-item">
+                <span>Show time</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-time">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="settings-item">
+                <span>Show date</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-date">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="settings-item">
+                <span>Show quotes</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-quotes">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+
+            <div class="settings-item">
+                <span>Show calendar</span>
+                <label class="switch">
+                    <input type="checkbox" id="show-calendar">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="settings-item">
+                <span>Show weather</span>
+                <label class="switch">
+                    <input type="checkbox" id="show-weather">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="settings-item">
+                <span>Dark background</span>
+                <label class="switch">
+                    <input type="checkbox" id="dark-background">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="settings-item">
+                <span>Language</span>
+                <select name="lang-select" id="language-select" class="select-box font-300">
+                    <option value="EN">English</option>
+                    <option value="FR">French</option>
+                    <option value="ES">Spanish</option>
+                    <option value="TR">Turkish</option>
+                    <option value="DE">German</option>
+                </select>
+            </div>
+
+            <div class="settings-item">
+                <span>Date Order</span>
+                <select name="date-select" id="date-order-select" class="select-box font-300">
+                    <option value="w-d-m">Weekday Date Month</option>
+                    <option value="w-d-m-y">Weekday Date Month Year</option>
+                    <option value="d-m-w">Date Month Weekday</option>
+                    <option value="d-m-y-w">Date Month Year Weekday</option>
+                </select>
+            </div>
+
+            <div class="settings-item">
+                <span>Font</span>
+                <select name="style" id="font-select" class="select-box font-300">
+                    <option value="Prompt">Prompt</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Roboto">Roboto</option>
+                </select>
+            </div>
+
+            <div class="settings-item">
+                <span>Location</span>
+                <input type="text" id="location" placeholder="Location">
+            </div>
+
+            <div class="settings-item" id="show-about">
+                <button>Show About</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="calendar-container" class="calendar-container">
+        <button id="calendar-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"
+                      fill="rgba(255,255,255,1)"/>
+            </svg>
+        </button>
+        <div id="calendar">
+            <div id="month">
+                <button class="change-month" id="prev-month">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"
+                              fill="rgba(255,255,255,1)"/>
+                    </svg>
+                </button>
+
+                <span id="month-name" class="font-700"></span>
+
+                <button class="change-month" id="next-month">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
+                              fill="rgba(255,255,255,1)"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="weekdays" class="font-500">
+
+            </div>
+            <div id="days">
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="weather-container" class="weather-container">
+        <div id="weather-text">
+            <span class="font-500" id="weather-city"></span>
+            <span class="font-300" id="weather-status"> - </span>
+            <span class="font-500" id="weather-temp"> - </span>
+        </div>
+        <img alt="Weather" src="" id="weather-icon">
+    </div>
+
+    <div id="about-container" class="about-container font-300">
+        <div class="name">
+
+        </div>
+        <div class="version">
+
+        </div>
+        <div class="information">
+
+        </div>
+        <div class="sources">
+
+        </div>
+        <div class="developer">
+
+        </div>
+        <div class="contact">
+
+        </div>
+        <button id="close-about">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+                      fill="rgba(255,255,255,1)"/>
+            </svg>
+        </button>
+    </div>
+
+
+    <button id="refresh-btn" class="refresh">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="none" d="M0 0h24v24H0z"/>
+            <path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z"
+                  fill="rgba(255,255,255,1)"/>
+        </svg>
+    </button>
+
+
+    <span id="attribution" class="attribution font-300"></span>
+
+
+</div>
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/script.js" type="module"></script>
+</body>
+</html>
