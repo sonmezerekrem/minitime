@@ -4,7 +4,7 @@ Minitime is a Chromium based browser extension for a minimal and customizable ne
 
 ## Sample Screens
 
-![Image 1](images/screenshots/img.png)
+![Image 1](images/screenshots/img1.png)
 
 ![Image 2](images/screenshots/img2.png)
 

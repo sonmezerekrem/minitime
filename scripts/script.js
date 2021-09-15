@@ -409,17 +409,11 @@ function setAbout() {
     $(".contact").text(about.contact);
 }
 
-function getHostname(url) {
-    const parser = document.createElement('a');
-    parser.href = url;
-    return parser.host;
-}
-
 function changeLanguage(value) {
-    console.log(value);
-    months = languages["months" + preferences.language];
-    weekdays = languages["weekdays" + preferences.language];
-    showWeather(preferences.language, true);
+    months = languages["months" + value];
+    weekdays = languages["weekdays" + value];
+    weekdaysShort = languages["weekdaysShort" + value]
+    showWeather(value, true);
     clearInterval(dateInterval);
     showDate();
     showCalendar(0);
