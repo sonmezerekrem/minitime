@@ -1,0 +1,22 @@
+{
+  "name": "Minitime for Edge",
+  "description": "A customizable new tab extension for Chromium browsers",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "short_name": "Minitime",
+  "author": "Ekrem Sonmezer",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "host_permissions": [
+    "https://minitime.netlify.app/*",
+    "https://picsum.photos/*"
+  ]
+}
