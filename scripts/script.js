@@ -56,7 +56,7 @@ $("#calendar-btn").click(() => {
 $("#refresh-btn").click(() => {
     preferences.image = `https://picsum.photos/seed/${Math.floor(Math.random() * 100000000)}/1920/1080`;
     preferences.lastRefresh = Date.now();
-    saveToStorage(0);
+    saveToStorage();
     $("body").css("background", `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${preferences.image}) no-repeat center center fixed`);
     $("#attribution").html(`Photo on <a href=${preferences.image}>Lorem Picsum</a>`);
 });
@@ -81,7 +81,7 @@ $('#toggle-date').change(() => {
         $("#date-order-select").prop("disabled", "disabled");
         clearInterval(dateInterval);
     }
-    saveToStorage(0);
+    saveToStorage();
 });
 
 
@@ -96,7 +96,7 @@ $('#show-weather').change(() => {
         $("#weather-container").hide();
         $("#location").prop("disabled", "disabled");
     }
-    saveToStorage(0);
+    saveToStorage();
 });
 
 $('#toggle-quotes').change(() => {
@@ -108,7 +108,7 @@ $('#toggle-quotes').change(() => {
     } else {
         $("#quotes-container").hide();
     }
-    saveToStorage(0);
+    saveToStorage();
 });
 
 $('#toggle-time').change(() => {
@@ -121,7 +121,7 @@ $('#toggle-time').change(() => {
         $("#time").hide();
         clearInterval(timeInterval);
     }
-    saveToStorage(0);
+    saveToStorage();
 });
 
 $('#show-calendar').change(() => {
@@ -132,7 +132,7 @@ $('#show-calendar').change(() => {
     } else {
         $("#calendar").css("display", "none");
     }
-    saveToStorage(0);
+    saveToStorage();
 });
 
 $('#dark-background').change(() => {
@@ -143,27 +143,27 @@ $('#dark-background').change(() => {
     } else {
         $("#body").css("background", `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${preferences.image}) no-repeat center center fixed`);
     }
-    saveToStorage(0);
+    saveToStorage();
 });
 
 $("#date-order-select").change(() => {
     preferences.dateFormat = $("#date-order-select option:selected").val();
     clearInterval(dateInterval);
     showDate();
-    saveToStorage(0);
+    saveToStorage();
 });
 
 $("#language-select").change(() => {
     const value = $("#language-select option:selected").val();
     preferences.language = value;
-    saveToStorage(0);
+    saveToStorage();
     changeLanguage(value);
 });
 
 $("#font-select").change(() => {
     const value = $("#font-select option:selected").val();
     preferences.font = value;
-    saveToStorage(0);
+    saveToStorage();
     $("*").css("font-family", value);
 });
 
@@ -197,7 +197,7 @@ $(document).mouseup(function (e) {
 
 
 // STORAGE
-function saveToStorage(save = 0) {
+function saveToStorage() {
     chrome.storage.sync.set({preferences: preferences}, function () {
     });
 }
@@ -205,7 +205,7 @@ function saveToStorage(save = 0) {
 function loadFromStorage() {
     chrome.storage.sync.get('preferences', function (result) {
         if (result.preferences == null) {
-            saveToStorage(0);
+            saveToStorage();
             loadFromStorage();
         } else {
             preferences = result.preferences;
@@ -219,7 +219,7 @@ function loadFromStorage() {
             if ((Math.abs(Date.now() - preferences.lastRefresh) / 36e5) > 24 || preferences.image == null) {
                 preferences.image = `https://picsum.photos/seed/${Math.floor(Math.random() * 100000000)}/1920/1080`;
                 preferences.lastRefresh = Date.now();
-                saveToStorage(0);
+                saveToStorage();
             }
 
             if (preferences.darkBackground) {
@@ -383,7 +383,7 @@ function showWeather(language, force = false) {
                 $("#weather-icon").attr("src", preferences.weatherIcon);
                 preferences.weatherLastRefresh = Date.now();
                 $("#weather-container").attr("title", `Powered by OpenWeather, Last Refresh: ${new Date(preferences.weatherLastRefresh).toLocaleTimeString().substr(0, 5)}`);
-                saveToStorage(0);
+                saveToStorage();
             })
             .catch(error => console.error(error));
     } else {

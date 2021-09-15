@@ -151,6 +151,10 @@
     font-size: 14px;
 }
 
+.settings-container #settings .settings-item label {
+    font-size: 14px;
+}
+
 .settings-container #settings #settings-heading {
     font-size: 20px;
     color: white;

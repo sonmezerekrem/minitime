@@ -1,5 +1,5 @@
 {
-  "name": "Minitime for Edge",
+  "name": "Minitime",
   "description": "A customizable new tab extension for Chromium browsers",
   "version": "1.0.0",
   "manifest_version": 3,
