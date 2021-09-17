@@ -265,3 +265,12 @@
     color: black;
 }
 
+
+.about-container .name {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.about-container a {
+    text-decoration: underline;
+}

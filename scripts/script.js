@@ -314,7 +314,7 @@ function showDate() {
 }
 
 function showTime() {
-    $("#time").text(new Date().toLocaleTimeString().substr(0, 5));
+    $("#time").text(new Date().toLocaleTimeString("en-GB").substr(0, 5));
     timeInterval = setTimeout(showTime, 10000);
 }
 
