@@ -382,7 +382,7 @@ function showWeather(language, force = false) {
                 $("#weather-temp").text(preferences.weather[1]);
                 $("#weather-icon").attr("src", preferences.weatherIcon);
                 preferences.weatherLastRefresh = Date.now();
-                $("#weather-container").attr("title", `Powered by OpenWeather, Last Refresh: ${new Date(preferences.weatherLastRefresh).toLocaleTimeString().substr(0, 5)}`);
+                $("#weather-container").attr("title", `Powered by OpenWeather, Last Refresh: ${new Date(preferences.weatherLastRefresh).toLocaleTimeString("en-GB").substr(0, 5)}`);
                 saveToStorage();
             })
             .catch(error => console.error(error));
@@ -391,7 +391,7 @@ function showWeather(language, force = false) {
         $("#weather-status").text(preferences.weather[0]);
         $("#weather-temp").text(preferences.weather[1]);
         $("#weather-icon").attr("src", preferences.weatherIcon);
-        $("#weather-container").attr("title", `Powered by OpenWeather, Last Refresh: ${new Date(preferences.weatherLastRefresh).toLocaleTimeString().substr(0, 5)}`);
+        $("#weather-container").attr("title", `Powered by OpenWeather, Last Refresh: ${new Date(preferences.weatherLastRefresh).toLocaleTimeString("en-GB").substr(0, 5)}`);
     }
 }
 
