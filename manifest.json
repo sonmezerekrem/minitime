@@ -1,7 +1,7 @@
 {
   "name": "Minitime",
   "description": "A customizable new tab extension for Chromium browsers",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "manifest_version": 3,
   "short_name": "Minitime",
   "author": "Ekrem Sonmezer",
@@ -13,9 +13,5 @@
   },
   "icons": {
     "128": "128.png"
-  },
-  "host_permissions": [
-    "https://minitime.netlify.app/*",
-    "https://picsum.photos/*"
-  ]
+  }
 }
