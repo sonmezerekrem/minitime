@@ -19,12 +19,12 @@ let preferences = {
     },
     showTime: true,
     showDate: true,
+    showQuotes: true,
+    showCalendar: true,
     dateFormat: "d-m-w",
     font: "Prompt",
-    showCalendar: true,
     location: "London",
     darkBackground: false,
-    showQuotes: true,
     language: "EN"
 };
 
@@ -364,7 +364,7 @@ function showWeather(force = false) {
     if (preferences.location == null || preferences.location === "")
         return;
     if (preferences.weather.lastRefresh == null || (Math.abs(Date.now() - preferences.weather.lastRefresh) / 36e5) > 1 || force) {
-        fetch(`https://nwv1k1ugmf.execute-api.eu-central-1.amazonaws.com/Prod/weather?operation=current&q=${preferences.location}&language=${preferences.language.toLowerCase()}`,
+        fetch(`https://nwv1k1ugmf.execute-api.eu-central-1.amazonaws.com/Prod/weather?operation=current&q=${preferences.location}&lang=${preferences.language.toLowerCase()}`,
             {
                 method: 'get',
                 headers: {'Content-Type': 'application/json'}
