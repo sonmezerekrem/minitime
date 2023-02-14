@@ -183,7 +183,6 @@ $("#location").on('keyup', function (e) {
 $("#background-query").on('keyup', function (e) {
     if (e.key === 'Enter' || e.keyCode === 13) {
         let value = $("#background-query").val();
-        value = value.replace(/\s/, ",");
         preferences.background.query = value;
         setBackground(true);
     }
