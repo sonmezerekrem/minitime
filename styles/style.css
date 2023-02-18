@@ -318,7 +318,7 @@
 }
 
 #visited-sites-ul li {
-    padding: 10px;
+    padding-left: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -336,12 +336,15 @@
 }
 
 #visited-sites-ul a {
+    padding: 10px 0 10px 4px;
     color: white;
     text-decoration: none;
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 350px;
+    max-width: 360px;
     display: block;
+    height: 100%;
+    width: 100%;
 }
