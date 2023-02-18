@@ -20,17 +20,15 @@
 
 <div id="container">
 
-
     <div id="datetime-container">
-        <span id="date" class="font-300"></span>
-        <span id="time" class="font-300"></span>
+        <span id="date" class="font-weight-300"></span>
+        <span id="time" class="font-weight-300"></span>
     </div>
 
-    <div id="quotes-container" class="font-300">
+    <div id="quotes-container" class="font-weight-300">
         <span id="quote"></span>
-        <span id="author" class="font-500"></span>
+        <span id="author" class="font-weight-500"></span>
     </div>
-
 
     <div id="settings-container" class="settings-container">
         <button id="settings-btn">
@@ -88,6 +86,14 @@
             </div>
 
             <div class="settings-item">
+                <span>Show most visited sites</span>
+                <label class="switch">
+                    <input type="checkbox" id="show-visited-sites">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="settings-item">
                 <span>Dark background</span>
                 <label class="switch">
                     <input type="checkbox" id="dark-background">
@@ -97,7 +103,7 @@
 
             <div class="settings-item">
                 <label for="language-select">Language</label>
-                <select name="lang-select" id="language-select" class="select-box font-300">
+                <select name="lang-select" id="language-select" class="select-box font-weight-300">
                     <option value="EN">English</option>
                     <option value="FR">French</option>
                     <option value="ES">Spanish</option>
@@ -108,7 +114,7 @@
 
             <div class="settings-item">
                 <label for="date-order-select">Date Order</label>
-                <select name="date-select" id="date-order-select" class="select-box font-300">
+                <select name="date-select" id="date-order-select" class="select-box font-weight-300">
                     <option value="w-d-m">Weekday Date Month</option>
                     <option value="w-d-m-y">Weekday Date Month Year</option>
                     <option value="d-m-w">Date Month Weekday</option>
@@ -118,7 +124,7 @@
 
             <div class="settings-item">
                 <label for="font-select">Font</label>
-                <select name="style" id="font-select" class="select-box font-300">
+                <select name="style" id="font-select" class="select-box font-weight-300">
                     <option value="Prompt">Prompt</option>
                     <option value="Poppins">Poppins</option>
                     <option value="Montserrat">Montserrat</option>
@@ -142,7 +148,6 @@
         </div>
     </div>
 
-
     <div id="calendar-container" class="calendar-container">
         <button id="calendar-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -161,7 +166,7 @@
                     </svg>
                 </button>
 
-                <span id="month-name" class="font-700"></span>
+                <span id="month-name" class="font-weight-700"></span>
 
                 <button class="change-month" id="next-month">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
@@ -171,7 +176,7 @@
                     </svg>
                 </button>
             </div>
-            <div id="weekdays" class="font-500">
+            <div id="weekdays" class="font-weight-500">
 
             </div>
             <div id="days">
@@ -181,17 +186,16 @@
         </div>
     </div>
 
-
-    <div id="weather-container" class="weather-container">
+    <div id="weather-container">
         <div id="weather-text">
-            <span class="font-500" id="weather-city"></span>
-            <span class="font-300" id="weather-status"> - </span>
-            <span class="font-500" id="weather-temp"> - </span>
+            <span class="font-weight-500" id="weather-city"></span>
+            <span class="font-weight-300" id="weather-status"> - </span>
+            <span class="font-weight-500" id="weather-temp"> - </span>
         </div>
         <img alt="weather" src="" id="weather-icon">
     </div>
 
-    <div id="about-container" class="about-container font-300">
+    <div id="about-container" class="font-weight-300">
         <div class="name">
 
         </div>
@@ -229,18 +233,15 @@
         </button>
     </div>
 
-
-    <button id="refresh-btn" class="refresh">
+    <button id="refresh-btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
             <path fill="none" d="M0 0h24v24H0z"/>
             <path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z"
                   fill="rgba(255,255,255,1)"/>
         </svg>
     </button>
-  
 
-    <span id="attribution" class="attribution font-300"></span>
-
+    <span id="attribution" class="font-weight-300"></span>
 
 </div>
 

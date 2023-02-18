@@ -1,12 +1,12 @@
 {
   "name": "Minitime",
   "description": "A customizable new tab extension for Chromium browsers",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "manifest_version": 3,
   "short_name": "Minitime",
   "author": "Ekrem Sonmezer",
   "permissions": [
-    "storage"
+    "storage", "topSites"
   ],
   "chrome_url_overrides": {
     "newtab": "index.html"
