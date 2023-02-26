@@ -13,7 +13,9 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="stylesheet" href="styles/style.css"/>
+
+    <link rel="stylesheet" href="styles/test.css"/>
+    <link rel="stylesheet" href="styles/switch.css"/>
 
 </head>
 <body id="body">
@@ -25,6 +27,268 @@
         <span id="time" class="font-weight-300"></span>
     </div>
 
+
+    <div id="preferences">
+        <div id="preferences-sidebar">
+            <div id="preferences-heading">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36   " fill="#000000" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <circle cx="128" cy="128" r="44" fill="none" stroke="#000000" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="24"></circle>
+                    <path d="M197.4,80.7a73.6,73.6,0,0,1,6.3,10.9L229.6,106a102,102,0,0,1,.1,44l-26,14.4a73.6,73.6,0,0,1-6.3,10.9l.5,29.7a104,104,0,0,1-38.1,22.1l-25.5-15.3a88.3,88.3,0,0,1-12.6,0L96.3,227a102.6,102.6,0,0,1-38.2-22l.5-29.6a80.1,80.1,0,0,1-6.3-11L26.4,150a102,102,0,0,1-.1-44l26-14.4a73.6,73.6,0,0,1,6.3-10.9L58.1,51A104,104,0,0,1,96.2,28.9l25.5,15.3a88.3,88.3,0,0,1,12.6,0L159.7,29a102.6,102.6,0,0,1,38.2,22Z"
+                          fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="24"></path>
+                </svg>
+                <span id="preferences-title">Preferences</span>
+            </div>
+            <div id="preferences-line-1"></div>
+
+            <div id="preferences-widgets" class="preferences-section">
+                <span class="font-weight-300 preferences-section-heading">GENERAL</span>
+                <div class="preferences-menu-item" id="menu-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="96" r="64" fill="none" stroke="#000000" stroke-miterlimit="10"
+                                stroke-width="16"></circle>
+                        <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></path>
+                    </svg>
+                    <span class="preferences-menu-item-text">Account</span>
+                </div>
+                <div class="preferences-menu-item" id="menu-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0a0000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <polyline points="232 216 176 104 120 216" fill="none" stroke="#0a0000" stroke-linecap="round"
+                                  stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="136" y1="184" x2="216" y2="184" fill="none" stroke="#0a0000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="88" y1="32" x2="88" y2="56" fill="none" stroke="#0a0000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="24" y1="56" x2="152" y2="56" fill="none" stroke="#0a0000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <path d="M120,56a96,96,0,0,1-96,96" fill="none" stroke="#0a0000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></path>
+                        <path d="M61.5,88A96,96,0,0,0,152,152" fill="none" stroke="#0a0000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></path>
+                    </svg>
+                    <span class="preferences-menu-item-text">Language</span>
+                </div>
+            </div>
+
+            <div class="preferences-section">
+                <span class="font-weight-300 preferences-section-heading">WIDGETS</span>
+                <div class="preferences-menu-item" id="menu-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-width="16"
+                                stroke-miterlimit="10"></circle>
+                        <polyline points="128 72 128 128 184 128" fill="none" stroke="#000000" stroke-linecap="round"
+                                  stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                    <span class="preferences-menu-item-text">Date and Time</span>
+                </div>
+                <div class="preferences-menu-item" id="menu-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <rect x="40" y="40" width="176" height="176" rx="8" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                        <line x1="176" y1="24" x2="176" y2="56" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="80" y1="24" x2="80" y2="56" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="40" y1="88" x2="216" y2="88" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <path d="M92,128h28l-16,20a16,16,0,1,1-11.3,27.3" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                        <polyline points="144 140 160 128 160 180" fill="none" stroke="#000000" stroke-linecap="round"
+                                  stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                    <span class="preferences-menu-item-text">Calendar</span>
+                </div>
+                <div class="preferences-menu-item" id="menu-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="60" fill="none" stroke="#000000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="16"></circle>
+                        <line x1="128" y1="36" x2="128" y2="16" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="62.9" y1="62.9" x2="48.8" y2="48.8" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="36" y1="128" x2="16" y2="128" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="62.9" y1="193.1" x2="48.8" y2="207.2" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="128" y1="220" x2="128" y2="240" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="193.1" y1="193.1" x2="207.2" y2="207.2" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="220" y1="128" x2="240" y2="128" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="193.1" y1="62.9" x2="207.2" y2="48.8" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                    <span class="preferences-menu-item-text">Weather</span>
+                </div>
+            </div>
+            <div class="preferences-section">
+                <span class="font-weight-300 preferences-section-heading">APPEARANCE</span>
+                <div class="preferences-menu-item" id="menu-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <rect x="40" y="56" width="168" height="80" rx="8" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                        <path d="M208,96h24a8,8,0,0,1,8,8v50a8.1,8.1,0,0,1-5.8,7.7L133.8,190.3A8.1,8.1,0,0,0,128,198v34"
+                              fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="16"></path>
+                        <line x1="40" y1="96" x2="16" y2="96" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                    <span class="preferences-menu-item-text">Theme</span>
+                </div>
+                <div class="preferences-menu-item" id="menu-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <rect x="40" y="40" width="176" height="176" rx="8" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                        <path d="M216,160l-42.3-42.3a8,8,0,0,0-11.4,0l-44.6,44.6a8,8,0,0,1-11.4,0L85.7,141.7a8,8,0,0,0-11.4,0L40,176"
+                              fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="16"></path>
+                        <circle cx="100" cy="92" r="12"></circle>
+                    </svg>
+                    <span class="preferences-menu-item-text">Background</span>
+                </div>
+            </div>
+            <div class="preferences-section">
+                <span class="font-weight-300 preferences-section-heading">SUPPORT</span>
+                <div class="preferences-menu-item" id="menu-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="16"></circle>
+                        <polyline points="120 120 128 120 128 176 136 176" fill="none" stroke="#000000"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        <circle cx="126" cy="84" r="12"></circle>
+                    </svg>
+                    <span class="preferences-menu-item-text">About</span>
+                </div>
+                <div class="preferences-menu-item" id="menu-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000"
+                         viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="16"></circle>
+                        <circle cx="128" cy="128" r="40" fill="none" stroke="#000000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="16"></circle>
+                        <line x1="99.7" y1="99.7" x2="60.1" y2="60.1" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="156.3" y1="99.7" x2="195.9" y2="60.1" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="156.3" y1="156.3" x2="195.9" y2="195.9" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="99.7" y1="156.3" x2="60.1" y2="195.9" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                    <span class="preferences-menu-item-text">Help</span>
+                </div>
+            </div>
+
+        </div>
+        <div id="preferences-content">
+            <div>
+
+            </div>
+            <div id="preferences-account-content" class="preference-sub-content">
+                <span class="preferences-content-header">Account</span>
+                <span class="preferences-content-description">Account and payment information</span>
+            </div>
+            <div id="preferences-language-content" class="preference-sub-content">
+                <span class="preferences-content-header">Language</span>
+                <span class="preferences-content-description">Change language of application</span>
+                <div class="preferences-content-inside">
+                    <div class="preferences-content-item">
+                        <span>Language</span>
+                        <select name="date-select" id="preference-0" class="preference-select">
+                            <option value="w-d-m">English</option>
+                            <option value="w-d-m-y">French</option>
+                            <option value="d-m-w">Spanish</option>
+                            <option value="d-m-y-w">Turkish</option>
+                            <option value="d-m-y-w">German</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="preferences-datetime-content" class="preference-sub-content">
+                <span class="preferences-content-header">Date and Time</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+                <div class="preferences-content-inside">
+                    <div class="preferences-content-item">
+                        <span>Show Date and Time</span>
+                        <input type="checkbox" name="" id="preference-1" class="switch">
+                        <label for="preference-1" class="switch-label">
+                            <div></div>
+                        </label>
+                    </div>
+                    <div class="preferences-content-item">
+                        <span>Show Date</span>
+                        <input type="checkbox" name="" id="preference-2" class="switch">
+                        <label for="preference-2" class="switch-label">
+                            <div></div>
+                        </label>
+                    </div>
+                    <div class="preferences-content-item">
+                        <span>Date Order</span>
+                        <select name="date-select" id="preference-3" class="preference-select">
+                            <option value="w-d-m">Weekday Date Month</option>
+                            <option value="w-d-m-y">Weekday Date Month Year</option>
+                            <option value="d-m-w">Date Month Weekday</option>
+                            <option value="d-m-y-w">Date Month Year Weekday</option>
+                        </select>
+                    </div>
+                    <div class="preferences-content-item">
+                        <span>Time Separator</span>
+                        <select name="date-select" id="preference-4" class="preference-select">
+                            <option value="colon">Colon</option>
+                            <option value="dot">Dot</option>
+                            <option value="space">Space</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="preferences-calendar-content" class="preference-sub-content">
+                <span class="preferences-content-header">Calendar</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+            </div>
+            <div id="preferences-weather-content" class="preference-sub-content">
+                <span class="preferences-content-header">Weather</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+            </div>
+            <div id="preferences-theme-content" class="preference-sub-content">
+                <span class="preferences-content-header">Theme</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+            </div>
+            <div id="preferences-background-content" class="preference-sub-content">
+                <span class="preferences-content-header">Background</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+            </div>
+            <div id="preferences-about-content" class="preference-sub-content">
+                <span class="preferences-content-header">About</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+            </div>
+            <div id="preferences-help-content" class="preference-sub-content">
+                <span class="preferences-content-header">Help</span>
+                <span class="preferences-content-description">Change date and time format according to your preferences</span>
+            </div>
+        </div>
+
+    </div>
+
     <div id="quotes-container" class="font-weight-300">
         <span id="quote"></span>
         <span id="author" class="font-weight-500"></span>
@@ -32,120 +296,28 @@
 
     <div id="settings-container" class="settings-container">
         <button id="settings-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M2 18h7v2H2v-2zm0-7h9v2H2v-2zm0-7h20v2H2V4zm18.674 9.025l1.156-.391 1 1.732-.916.805a4.017 4.017 0 0 1 0 1.658l.916.805-1 1.732-1.156-.391c-.41.37-.898.655-1.435.83L19 21h-2l-.24-1.196a3.996 3.996 0 0 1-1.434-.83l-1.156.392-1-1.732.916-.805a4.017 4.017 0 0 1 0-1.658l-.916-.805 1-1.732 1.156.391c.41-.37.898-.655 1.435-.83L17 11h2l.24 1.196c.536.174 1.024.46 1.434.83zM18 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                      fill="rgba(255,255,255,1)"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f7f7f7" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <line x1="128" y1="124" x2="128" y2="216" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="128" y1="40" x2="128" y2="84" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="200" y1="204" x2="200" y2="216" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="200" y1="40" x2="200" y2="164" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="224" y1="164" x2="176" y2="164" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="56" y1="172" x2="56" y2="216" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="56" y1="40" x2="56" y2="132" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="32" y1="132" x2="80" y2="132" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
+                <line x1="152" y1="84" x2="104" y2="84" fill="none" stroke="#f7f7f7" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="24"></line>
             </svg>
         </button>
-        <div id="settings">
-
-            <span id="settings-heading">
-                Settings
-            </span>
-
-            <div class="settings-item">
-                <span>Show time</span>
-                <label class="switch">
-                    <input type="checkbox" id="toggle-time">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="settings-item">
-                <span>Show date</span>
-                <label class="switch">
-                    <input type="checkbox" id="toggle-date">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="settings-item">
-                <span>Show quotes</span>
-                <label class="switch">
-                    <input type="checkbox" id="toggle-quotes">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-
-            <div class="settings-item">
-                <span>Show calendar</span>
-                <label class="switch">
-                    <input type="checkbox" id="show-calendar">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="settings-item">
-                <span>Show weather</span>
-                <label class="switch">
-                    <input type="checkbox" id="show-weather">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="settings-item">
-                <span>Show most visited sites</span>
-                <label class="switch">
-                    <input type="checkbox" id="show-visited-sites">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="settings-item">
-                <span>Dark background</span>
-                <label class="switch">
-                    <input type="checkbox" id="dark-background">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="settings-item">
-                <label for="language-select">Language</label>
-                <select name="lang-select" id="language-select" class="select-box font-weight-300">
-                    <option value="EN">English</option>
-                    <option value="FR">French</option>
-                    <option value="ES">Spanish</option>
-                    <option value="TR">Turkish</option>
-                    <option value="DE">German</option>
-                </select>
-            </div>
-
-            <div class="settings-item">
-                <label for="date-order-select">Date Order</label>
-                <select name="date-select" id="date-order-select" class="select-box font-weight-300">
-                    <option value="w-d-m">Weekday Date Month</option>
-                    <option value="w-d-m-y">Weekday Date Month Year</option>
-                    <option value="d-m-w">Date Month Weekday</option>
-                    <option value="d-m-y-w">Date Month Year Weekday</option>
-                </select>
-            </div>
-
-            <div class="settings-item">
-                <label for="font-select">Font</label>
-                <select name="style" id="font-select" class="select-box font-weight-300">
-                    <option value="Prompt">Prompt</option>
-                    <option value="Poppins">Poppins</option>
-                    <option value="Montserrat">Montserrat</option>
-                    <option value="Roboto">Roboto</option>
-                </select>
-            </div>
-
-            <div class="settings-item">
-                <label for="location">Location</label>
-                <input type="text" id="location" placeholder="Location">
-            </div>
-            <div class="settings-item">
-                <label for="background-query">Background Query</label>
-                <input type="text" id="background-query" placeholder="Query">
-            </div>
-
-            <div class="settings-item" id="show-about">
-                <button>Show About</button>
-            </div>
-
-        </div>
     </div>
 
     <div id="calendar-container" class="calendar-container">
@@ -156,34 +328,6 @@
                       fill="rgba(255,255,255,1)"/>
             </svg>
         </button>
-        <div id="calendar">
-            <div id="month">
-                <button class="change-month" id="prev-month">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
-                        <path fill="none" d="M0 0h24v24H0z"/>
-                        <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"
-                              fill="rgba(255,255,255,1)"/>
-                    </svg>
-                </button>
-
-                <span id="month-name" class="font-weight-700"></span>
-
-                <button class="change-month" id="next-month">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
-                        <path fill="none" d="M0 0h24v24H0z"/>
-                        <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
-                              fill="rgba(255,255,255,1)"/>
-                    </svg>
-                </button>
-            </div>
-            <div id="weekdays" class="font-weight-500">
-
-            </div>
-            <div id="days">
-
-
-            </div>
-        </div>
     </div>
 
     <div id="weather-container">
@@ -196,30 +340,22 @@
     </div>
 
     <div id="about-container" class="font-weight-300">
-        <div class="name">
-
-        </div>
+        <div class="name"></div>
         <div>
             <span><b>Version</b></span>
             <div class="version"></div>
         </div>
         <div>
             <span><b>About</b></span>
-            <div class="information">
-
-            </div>
+            <div class="information"></div>
         </div>
         <div class="sources">
             <span><b>Sources</b></span>
         </div>
         <div>
             <span><b>Developer</b></span>
-            <div class="developer">
-
-            </div>
-            <div class="contact">
-
-            </div>
+            <div class="developer"></div>
+            <div class="contact"></div>
             <div class="patreon">
                 <a href="https://www.patreon.com/bePatron?u=61807408">Become a Patron!</a>
             </div>
@@ -231,6 +367,10 @@
                       fill="rgba(255,255,255,1)"/>
             </svg>
         </button>
+    </div>
+
+    <div>
+
     </div>
 
     <button id="refresh-btn">
@@ -246,6 +386,7 @@
 </div>
 
 <script src="scripts/jquery.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="scripts/script.js" type="module"></script>
 </body>
 </html>

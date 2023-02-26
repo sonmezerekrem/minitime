@@ -1,8 +1,10 @@
-import {about, months, quotes, shortenWeekdays, weekdays} from "./data.js";
+import {about, languageData, quotes} from "./data.js";
+import {calendarComponent} from "./components.js";
+import * as handlers from "./handlers.js"
 
 let dateInterval, timeInterval;
 let preferences = {
-    version: 3,
+    version: 14,
     weather: {
         show: true,
         temperature: null,
@@ -29,46 +31,45 @@ let preferences = {
     language: "EN"
 };
 
-
-$("#prev-month").click(() => {
-    const current = $("#month-name").text();
-    if (current === months[preferences.language][new Date().getMonth()]) {
-        showCalendar(-1);
-    } else if (current === months[preferences.language][new Date().getMonth() + 1]) {
-        showCalendar(0);
-    }
-});
-
-$("#next-month").click(() => {
-    const current = $("#month-name").text();
-    if (current === months[preferences.language][new Date().getMonth()]) {
-        showCalendar(1);
-    } else if (current === months[preferences.language][new Date().getMonth() - 1]) {
-        showCalendar(0);
-    }
-});
-
-$("#settings-btn").click(() => {
+$(document).on('click', '#settings-btn', () => {
     $('#settings').toggle();
 });
 
-$("#calendar-btn").click(() => {
+$(document).on('click', '#calendar-btn', () => {
     $('#calendar').toggle();
 });
 
-$("#refresh-btn").click(() => {
+$(document).on('click', '#refresh-btn', () => {
     setBackground(true);
 });
 
-$("#show-about").click(() => {
+$(document).on('click', '#prev-month', () => {
+    const current = $("#month-name").text();
+    if (current === languageData[preferences.language].months[new Date().getMonth()]) {
+        showCalendar(-1);
+    } else if (current === languageData[preferences.language].months[new Date().getMonth() + 1]) {
+        showCalendar(0);
+    }
+});
+
+$(document).on('click', '#next-month', () => {
+    const current = $("#month-name").text();
+    if (current === languageData[preferences.language].months[new Date().getMonth()]) {
+        showCalendar(1);
+    } else if (current === languageData[preferences.language].months[new Date().getMonth() - 1]) {
+        showCalendar(0);
+    }
+});
+
+$(document).on('click', '#show-about', () => {
     $('#about-container').css('display', 'flex');
 });
 
-$("#close-about").click(() => {
+$(document).on('click', '#close-about', () => {
     $('#about-container').css('display', 'none');
 });
 
-$('#toggle-date').change(() => {
+$(document).on('change', '#toggle-date', () => {
     const value = $('#toggle-date').prop("checked");
     preferences.showDate = value;
     if (value) {
@@ -84,13 +85,13 @@ $('#toggle-date').change(() => {
 });
 
 
-$('#show-weather').change(() => {
+$(document).on('change', '#show-weather', () => {
     const value = $('#show-weather').prop("checked");
     preferences.weather.show = value;
     if (value) {
         $("#weather-container").show();
         $("#location").prop("disabled", false);
-        showWeather(preferences.language);
+        showWeather();
     } else {
         $("#weather-container").hide();
         $("#location").prop("disabled", "disabled");
@@ -98,7 +99,7 @@ $('#show-weather').change(() => {
     saveToStorage();
 });
 
-$('#show-visited-sites').change(() => {
+$(document).on('change', '#show-visited-sites', () => {
     const value = $('#show-visited-sites').prop("checked");
     preferences.showVisitedSites = value;
     if (value) {
@@ -113,7 +114,7 @@ $('#show-visited-sites').change(() => {
     saveToStorage();
 });
 
-$('#toggle-quotes').change(() => {
+$(document).on('change', '#toggle-quotes', () => {
     const value = $('#toggle-quotes').prop("checked");
     preferences.showQuotes = value;
     if (value) {
@@ -125,7 +126,7 @@ $('#toggle-quotes').change(() => {
     saveToStorage();
 });
 
-$('#toggle-time').change(() => {
+$(document).on('change', '#toggle-time', () => {
     const value = $('#toggle-time').prop("checked");
     preferences.showTime = value;
     if (value) {
@@ -138,7 +139,7 @@ $('#toggle-time').change(() => {
     saveToStorage();
 });
 
-$('#show-calendar').change(() => {
+$(document).on('change', '#show-calendar', () => {
     const value = $('#show-calendar').prop("checked");
     preferences.showCalendar = value;
     if (value) {
@@ -149,7 +150,7 @@ $('#show-calendar').change(() => {
     saveToStorage();
 });
 
-$('#dark-background').change(() => {
+$(document).on('change', '#dark-background', () => {
     const value = $('#dark-background').prop("checked");
     preferences.darkBackground = value;
     if (value) {
@@ -160,27 +161,27 @@ $('#dark-background').change(() => {
     saveToStorage();
 });
 
-$("#date-order-select").change(() => {
+$(document).on('change', '#date-order-select', () => {
     preferences.dateFormat = $("#date-order-select option:selected").val();
     clearInterval(dateInterval);
     showDate();
     saveToStorage();
 });
 
-$("#language-select").change(() => {
+$(document).on('change', '#language-select', () => {
     preferences.language = $("#language-select option:selected").val();
     saveToStorage();
     changeLanguage();
 });
 
-$("#font-select").change(() => {
+$(document).on('change', '#font-select', () => {
     const value = $("#font-select option:selected").val();
     preferences.font = value;
     saveToStorage();
     $("*").css("font-family", value);
 });
 
-$("#location").on('keyup', function (e) {
+$(document).on('keyup', '#location', (e) => {
     if (e.key === 'Enter' || e.keyCode === 13) {
         let value = $("#location").val();
         value = value.replace(/\s/, ",");
@@ -196,7 +197,7 @@ $("#location").on('keyup', function (e) {
     }
 });
 
-$("#background-query").on('keyup', function (e) {
+$(document).on('keyup', '#background-query', (e) => {
     if (e.key === 'Enter' || e.keyCode === 13) {
         let value = $("#background-query").val();
         preferences.background.query = value;
@@ -204,17 +205,10 @@ $("#background-query").on('keyup', function (e) {
     }
 });
 
+
 $(document).on('click', '.main-folder', function () {
     const element = $(this).children().eq(2);
-    console.log(element);
     element.css("display", "flex");
-});
-
-$(document).mouseup(function (e) {
-    const container = $("#settings");
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }
 });
 
 
@@ -226,7 +220,7 @@ function saveToStorage() {
 
 function loadFromStorage() {
     chrome.storage.sync.get('preferences', function (result) {
-        if (result.preferences == null || result.preferences.version == null || result.preferences < 3) {
+        if (result.preferences == null || result.preferences.version == null || result.preferences < 14) {
             saveToStorage();
             loadFromStorage();
         } else {
@@ -321,13 +315,13 @@ function showDate() {
                     value.push(today.getDate());
                     break;
                 case "m":
-                    value.push(months[preferences.language][today.getMonth()]);
+                    value.push(languageData[preferences.language].months[today.getMonth()]);
                     break;
                 case "y":
                     value.push(today.getFullYear());
                     break;
                 case "w":
-                    value.push(weekdays[preferences.language][today.getDay()]);
+                    value.push(languageData[preferences.language].weekdays[today.getDay()]);
                     break;
             }
         }
@@ -348,13 +342,16 @@ function showQuotes() {
 }
 
 function showCalendar(monthShift) {
+    calendarComponent.remove();
+    $("#calendar-container").append(calendarComponent);
+
     const today = new Date();
 
     $("#weekdays").html("");
     for (let i = 0; i < 7; i++) {
         const span = $("<span></span>");
         span.addClass("weekday");
-        span.text(shortenWeekdays[preferences.language][i].substr(0, 3));
+        span.text(languageData[preferences.language].shortenWeekdays[i].substr(0, 3));
         $("#weekdays").append(span);
     }
 
@@ -384,7 +381,7 @@ function showCalendar(monthShift) {
         div.appendTo(divContainer);
         weekday = 0;
     }
-    $("#month-name").text(months[preferences.language][today.getMonth() + monthShift]);
+    $("#month-name").text(languageData[preferences.language].months[today.getMonth() + monthShift]);
 }
 
 function showWeather(force = false) {
@@ -416,7 +413,6 @@ function showWeather(force = false) {
 
 function setBackground(force = false) {
     if ((Math.abs(Date.now() - preferences.background.lastRefresh) / 36e5) > 24 || preferences.background.src == null || force) {
-        console.log(preferences.background);
         fetch(`https://nwv1k1ugmf.execute-api.eu-central-1.amazonaws.com/Prod/background?query=${encodeURIComponent(preferences.background.query)}`,
             {
                 method: 'get',

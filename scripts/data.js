@@ -1,7 +1,245 @@
+export const languageData = {
+    EN: {
+        months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        shortenWeekdays: ["Mon", "Tue", " Wed", "Thu", "Fri", "Sat", "Sun"],
+        preferences: {
+            header: "Preferences",
+            showTime: "Show Time",
+            showDate: "Show Date",
+            showQuotes: "Show Quotes",
+            showCalendar: "Show Calendar",
+            showWeather: "Show Weather",
+            showMostVisitedSites: "Show Most Visited Sites",
+            darkBackground: "Dark Background",
+            language: "Language",
+            languageList: [
+                "English",
+                "French",
+                "Spanish",
+                "Turkish",
+                "German"
+            ],
+            dateOrder: "Date Order",
+            dateOrderList: [
+                "Weekday Date Month",
+                "Weekday Date Month Year",
+                "Date Month Weekday",
+                "Date Month Year Weekday"
+            ],
+            font: "Font",
+            location: "Location",
+            backgroundKeyword: "Background Keyword",
+            showAbout: "About",
+            about : {
+                developer: "Ekrem Sönmezer",
+                year: 2021,
+                contact: "ekremsonmezerdeveloperacc@gmail.com",
+                sources: [["images", "Unsplash", "https://unsplash.com"],
+                    ["icons", "Remix Icons", "https://remixicon.com"],
+                    ["weather", "WeatherApi", "https://www.weatherapi.com/"],
+                ],
+                version: "1.3.1",
+                name: "Minitime",
+                information: "Minitime is a Chromium based browser extension for a minimal and customizable new tab pages.",
+                patreon: "https://www.patreon.com/ekremsonmezer"
+            }
+        }
+    },
+    FR: {
+        months: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+        weekdays: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
+        shortenWeekdays: ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+        preferences: {
+            header: "Preferences",
+            showTime: "Show Time",
+            showDate: "Show Date",
+            showQuotes: "Show Quotes",
+            showCalendar: "Show Calendar",
+            showWeather: "Show Weather",
+            showMostVisitedSites: "Show Most Visited Sites",
+            darkBackground: "Dark Background",
+            language: "Language",
+            languageList: [
+                "English",
+                "French",
+                "Spanish",
+                "Turkish",
+                "German"
+            ],
+            dateOrder: "Date Order",
+            dateOrderList: [
+                "Weekday Date Month",
+                "Weekday Date Month Year",
+                "Date Month Weekday",
+                "Date Month Year Weekday"
+            ],
+            font: "Font",
+            location: "Location",
+            backgroundKeyword: "Background Keyword",
+            showAbout: "About",
+            about : {
+                developer: "Ekrem Sönmezer",
+                year: 2021,
+                contact: "ekremsonmezerdeveloperacc@gmail.com",
+                sources: [["images", "Unsplash", "https://unsplash.com"],
+                    ["icons", "Remix Icons", "https://remixicon.com"],
+                    ["weather", "WeatherApi", "https://www.weatherapi.com/"],
+                ],
+                version: "1.3.1",
+                name: "Minitime",
+                information: "Minitime is a Chromium based browser extension for a minimal and customizable new tab pages.",
+                patreon: "https://www.patreon.com/ekremsonmezer"
+            }
+        }
+    },
+    ES: {
+        months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+        weekdays: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+        shortenWeekdays: ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
+        preferences: {
+            header: "Preferences",
+            showTime: "Show Time",
+            showDate: "Show Date",
+            showQuotes: "Show Quotes",
+            showCalendar: "Show Calendar",
+            showWeather: "Show Weather",
+            showMostVisitedSites: "Show Most Visited Sites",
+            darkBackground: "Dark Background",
+            language: "Language",
+            languageList: [
+                "English",
+                "French",
+                "Spanish",
+                "Turkish",
+                "German"
+            ],
+            dateOrder: "Date Order",
+            dateOrderList: [
+                "Weekday Date Month",
+                "Weekday Date Month Year",
+                "Date Month Weekday",
+                "Date Month Year Weekday"
+            ],
+            font: "Font",
+            location: "Location",
+            backgroundKeyword: "Background Keyword",
+            showAbout: "About",
+            about : {
+                developer: "Ekrem Sönmezer",
+                year: 2021,
+                contact: "ekremsonmezerdeveloperacc@gmail.com",
+                sources: [["images", "Unsplash", "https://unsplash.com"],
+                    ["icons", "Remix Icons", "https://remixicon.com"],
+                    ["weather", "WeatherApi", "https://www.weatherapi.com/"],
+                ],
+                version: "1.3.1",
+                name: "Minitime",
+                information: "Minitime is a Chromium based browser extension for a minimal and customizable new tab pages.",
+                patreon: "https://www.patreon.com/ekremsonmezer"
+            }
+        }
+    },
+    TR: {
+        months: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+        weekdays: ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
+        shortenWeekdays: ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+        preferences: {
+            header: "Tercihler",
+            showTime: "Saati Göster",
+            showDate: "Tarihi Göster",
+            showQuotes: "Alıntıları Göster",
+            showCalendar: "Takvimi Göster",
+            showWeather: "Hava Durumunu Göster",
+            showMostVisitedSites: "En Cok Ziyaret Edilen Siteleri Göster",
+            darkBackground: "Siyah Arkaplan",
+            language: "Dil",
+            languageList: [
+                "Ingilizce",
+                "Fransızca",
+                "Ispanyolca",
+                "Türkçe",
+                "Almanca"
+            ],
+            dateOrder: "Tarih Gösterim Sırası",
+            dateOrderList: [
+                "Hafta Gün Ay",
+                "Hafta Gün Ay Yıl",
+                "Gün Ay Hafta",
+                "Gün Ay Yıl Hafta"
+            ],
+            font: "Font",
+            location: "Konum",
+            backgroundKeyword: "Arkaplan Konusu",
+            showAbout: "Hakkında",
+            about : {
+                developer: "Ekrem Sönmezer",
+                year: 2021,
+                contact: "ekremsonmezerdeveloperacc@gmail.com",
+                sources: [["images", "Unsplash", "https://unsplash.com"],
+                    ["icons", "Remix Icons", "https://remixicon.com"],
+                    ["weather", "WeatherApi", "https://www.weatherapi.com/"],
+                ],
+                version: "1.3.1",
+                name: "Minitime",
+                information: "Minitime is a Chromium based browser extension for a minimal and customizable new tab pages.",
+                patreon: "https://www.patreon.com/ekremsonmezer"
+            }
+        }
+    },
+    DE: {
+        months: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+        weekdays: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
+        shortenWeekdays: ["Mon", "Die", "Mit", "Don", "Fre", "Sam", "Son"],
+        preferences: {
+            header: "Preferences",
+            showTime: "Show Time",
+            showDate: "Show Date",
+            showQuotes: "Show Quotes",
+            showCalendar: "Show Calendar",
+            showWeather: "Show Weather",
+            showMostVisitedSites: "Show Most Visited Sites",
+            darkBackground: "Dark Background",
+            language: "Language",
+            languageList: [
+                "English",
+                "French",
+                "Spanish",
+                "Turkish",
+                "German"
+            ],
+            dateOrder: "Date Order",
+            dateOrderList: [
+                "Weekday Date Month",
+                "Weekday Date Month Year",
+                "Date Month Weekday",
+                "Date Month Year Weekday"
+            ],
+            font: "Font",
+            location: "Location",
+            backgroundKeyword: "Background Keyword",
+            showAbout: "About",
+            about : {
+                developer: "Ekrem Sönmezer",
+                year: 2021,
+                contact: "ekremsonmezerdeveloperacc@gmail.com",
+                sources: [["images", "Unsplash", "https://unsplash.com"],
+                    ["icons", "Remix Icons", "https://remixicon.com"],
+                    ["weather", "WeatherApi", "https://www.weatherapi.com/"],
+                ],
+                version: "1.3.1",
+                name: "Minitime",
+                information: "Minitime is a Chromium based browser extension for a minimal and customizable new tab pages.",
+                patreon: "https://www.patreon.com/ekremsonmezer"
+            }
+        }
+    }
+};
+
 export const months = {
     EN: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     TR: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
-    FR: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet",  "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    FR: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
     ES: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
     DE: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
 };

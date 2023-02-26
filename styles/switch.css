@@ -1,0 +1,41 @@
+.switch {
+    display: none;
+}
+
+.switch-label {
+    display: block;
+    width: 50px;
+    height: 28px;
+    background-color: #eeeeee;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2px;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+
+.switch-label div {
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    border-radius: 13px;
+    transition: .3s cubic-bezier(.58, 0, .37, 1.28);
+    position: relative;
+}
+
+.switch:checked + .switch-label div {
+    transform: translateX(21px);
+}
+
+.switch:checked + .switch-label {
+    background-color: rgb(9, 9, 9);
+}
+
+.switch:active + .switch-label div {
+    width: 33px
+}
+
+.switch:checked:active + .switch-label div {
+    transform: translateX(16px)
+}

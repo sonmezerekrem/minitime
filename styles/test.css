@@ -1,0 +1,129 @@
+#preferences {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+    height: 800px;
+    border-radius: 5px;
+    background: white;
+    z-index: 20;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#preferences-sidebar {
+    width: 300px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 100%;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 20px 20px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ebedee;
+}
+
+#preferences-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#preferences-title {
+    width: 100%;
+    display: block;
+    padding-left: 20px;
+    font-size: 24px;
+}
+
+#preferences-line-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+    background-image: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.preferences-section {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.preferences-section-heading {
+    display: block;
+    color: #565656;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.preferences-menu-item {
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.preferences-menu-item:hover {
+    font-weight: 500;
+}
+
+.preferences-menu-item-selected {
+    font-weight: 700;
+}
+
+.preferences-menu-item-text {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+#preferences-content {
+    width: 100%;
+    padding: 60px 40px 40px;
+}
+
+.preference-sub-content{
+    display: none;
+}
+
+.preferences-content-header {
+    font-weight: 500;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.preferences-content-description {
+    font-weight: 300;
+    font-size: 15px;
+    color: #616161;
+    display: block;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.preferences-content-item {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.preference-select {
+    font-weight: 300;
+    width: 240px;
+    border: none;
+    background: #eeeeee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
